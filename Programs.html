@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Display content on browser after 5 seconds -->
+<p id="id"></p>
+<script>
+    setTimeout(myfun,5000);
+    function myfun()
+    {
+        document.getElementById("id").innerHTML="JAY SHREE RAM!!";
+    }
+</script>
+
+<!-- 2. Display addition of two number on browser using callback function -->
+<p id="q2"></p>
+<script>
+    function mydisplay(sum)
+    {
+        document.getElementById("q2").innerHTML="<b>"+sum+"</b>";
+
+    }
+    function mycals(num1,num2,mycallback)
+    {
+        sum=num1+num2;
+        mycallback(sum);
+    }
+    mycals(20,25,mydisplay)
+</script>
+
+<!-- 3. Initialize two variables and increment both the variables each time and display the
+ addition of both the variables at interval of 1 second. -->
+ <p id="q3"></p>
+ <script>
+    function add(a,b)
+    {
+        obj=document.getElementById("q3")
+        obj.innerHTML=(a+b);
+        
+    }
+    a=2;
+    b=5;
+    setInterval(function()
+{
+    add(++a,++b);
+},1000)
+ </script>
+
+<!-- 4. Write a js code that display ”Hello” with increasing font size in interval of 50ms in blue
+colour and it should stop when font size reaches to 50px. -->
+
+<p id="q4"></p>
+<script>
+    size=15;
+    function add1()
+    {
+        obj-document.getElementById("q4");
+        obj.innerHTML="hello";
+        obj.style.color="blue"
+        obj.style.fontSize=size+"px";
+
+        if(size<=50)
+        {
+            size++
+        }
+    }
+    setInterval(add1,1000)
+</script>
+    
+</body>
+</html>
