@@ -1,0 +1,33 @@
+Node.js is a lightweight framework. The core modules include bare minimum functionalities of
+Node.js. These core modules are compiled into its binary distribution and loaded automatically
+when the Node.js process starts. However, you need to import the core module first in order to
+use it in your application.
+
+Common use for the File System module
+1. Create files ->fs.writeFile() fs.writeFile( file, data, options, callback )
+2. Read files ->fs.readFile() fs.writeFile( file, data, options, callback )
+3. Update files ->fs.appendFile() fs.appendFile( path, data, options, callback )
+4. Delete files ->fs.unlink() fs.unlink( path, callback )
+
+                Synchronous Approach -Blocking Mod
+ 
+    var ps=require("fs");
+
+    // To Write File in Sync
+    ps.writeFileSync("Hello.txt","Hello World")
+
+    // To Read File in Sync
+    var data=ps.readFileSync("Hello.txt");
+
+    //console.log(data)  Provides Buffer data
+
+    //Use .toString() Method to convert this Buffer object to a string
+
+    console.log(data.toString());
+    console.log("Program ended");
+
+Output:
+Hello World
+Program ended
+                
+
