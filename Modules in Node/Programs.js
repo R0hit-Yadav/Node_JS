@@ -70,8 +70,8 @@ var obj=JSON.parse(data2) //stored data in string formate so require to convert 
 console.log(obj.Name[0].Firstname +" "+ obj.Name[1].Lastname);
 // Output:
 // { Name: [ { Firstname: 'ROHIT' }, { Lastname: 'YADAV' } ] }
-// Khushbu
-// Khushbu Patel
+// ROHIT
+// ROHIT YADAV
 
 
 
