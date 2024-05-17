@@ -70,6 +70,30 @@ colour and it should stop when font size reaches to 50px. -->
     }
     setInterval(add1,1000)
 </script>
-    
+
+<!-- 5. Write code to increase the font size at interval of 50 ms and it should stop increasing
+when the font size reaches to 50px. This task should be performed when you click on
+“Increase button” on browser. (Default font size 15px) -->
+<p id="q5" style="color: blue;">Hello</p>
+<button onclick="q5()">Font-Size</button>
+<script>
+    font="15"
+    function fun(font)
+    {
+        document.getElementById("q5").style.fontSize=font;
+    }
+    function q5()
+    {
+        setInterval(() => {
+            if(font<=50)
+            {
+                fun(font++)
+            }
+            
+        }, 50);
+    }
+</script>
+
+
 </body>
 </html>
