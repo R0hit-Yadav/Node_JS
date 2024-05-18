@@ -75,5 +75,35 @@ console.log(obj.Name[0].Firstname +" "+ obj.Name[1].Lastname);
 
 
 
+// Write node.js script to create file named “temp.txt”. Now, check if available physical
+// memory of the system is greater than 1 GB then print message “Sufficient Memory” in the
+// file, else print message “Low Memory” in file.
+var ps=require("fs");
+var os=require("os");
+console.log(os.arch());
+console.log(os.hostname());
+console.log(os.platform());
+console.log(os.tmpdir());
+freemem=os.freemem()/1024/1024/1024;
+if(freemem > 1){
+ps.writeFileSync("temp.txt","Sufficient memory")
+}
+else{
+ ps.writeFileSync("temp.txt","Low memory")
+}
+// Output:
+// x64
+// DESKTOP-B48OJU5
+// win32
+// C:\Users\HOME\AppData\Local\Temp
+
+
+// Write node.js script to create a folder named “AA” at temp folder. Also, create file named
+// “temp1.txt” inside “AA” folder. Now, check if working on 32 bit plateform then print You
+// are working on windows 32 bit else print You are working on windows 64 bit.
+
+
+
+
 
 
