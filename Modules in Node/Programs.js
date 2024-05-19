@@ -85,10 +85,12 @@ console.log(os.hostname());
 console.log(os.platform());
 console.log(os.tmpdir());
 freemem=os.freemem()/1024/1024/1024;
-if(freemem > 1){
-ps.writeFileSync("temp.txt","Sufficient memory")
+if(freemem > 1)
+    {
+    ps.writeFileSync("temp.txt","Sufficient memory")
 }
-else{
+else
+{
  ps.writeFileSync("temp.txt","Low memory")
 }
 // Output:
