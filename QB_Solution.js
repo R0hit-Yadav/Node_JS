@@ -99,7 +99,7 @@ console.log(outputObject);  // Output: { ABC: 'Manager' }
 
 
 
-//QB-28 Table Question
+//QB-28 Table Question it's method not answer of question
 const sub = { 
 "FSD": [ 
 { 
